@@ -14,7 +14,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
 
-DATASET_PATH = os.path.join(os.getcwd(), "datasets", "housing.csv")
+DATASET_PATH = os.path.join(os.getcwd(), "datasets", "Housing.csv")
 
 trained_models = {}  # Store trained models globally
 scaler = None
@@ -116,4 +116,4 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=False,host="0.0.0.0",port=90000)
+    app.run(debug=False,host="0.0.0.0",port=10000)
