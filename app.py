@@ -12,7 +12,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
+CORS(app, supports_credentials=True)
+
 
 DATASET_PATH = os.path.join(os.getcwd(), "datasets", "Housing.csv")
 
